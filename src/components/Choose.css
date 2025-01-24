@@ -1,0 +1,53 @@
+.choose-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .choose-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .choose-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .choose-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .feature-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  

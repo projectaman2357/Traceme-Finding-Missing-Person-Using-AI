@@ -1,0 +1,112 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #3b2281, #bd1616); /* Gradient Background */
+
+  /* background-color: rgba(59, 130, 246, 0.5); */
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  font-style: inherit;
+  font-weight: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for specific names */
+.nav-links a:hover {
+  color: rgba(255, 140, 0, 0.9); /* Orange tint */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgba(255, 140, 0, 0.9);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline effect */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #007acc;
+}
+
+/* Marquee styles */
+.marque-container {
+  background: linear-gradient(to right, #3b2281, #bd1616); /* Gradient Background */
+
+  /* background-color: rgba(124, 71, 133); */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.marquee {
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  animation: marqueeScroll 10s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

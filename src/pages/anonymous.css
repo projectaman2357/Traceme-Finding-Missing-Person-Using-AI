@@ -1,0 +1,73 @@
+/* AnonymousForm.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .anonymous-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .anonymous-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .anonymous-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #555;
+  }
+  
+  .anonymous-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .anonymous-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .anonymous-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .anonymous-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submitted-data {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e7f3fe;
+  }
+  
+  .submitted-data h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  

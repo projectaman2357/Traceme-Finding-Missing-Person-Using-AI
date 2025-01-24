@@ -1,0 +1,64 @@
+.partnership-section {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  height: 100px; /* Adjust as needed */
+  background-color: white;
+}
+
+.scrolling-logos {
+  display: flex;
+  gap: 20px;
+  animation: scroll 15s linear infinite;
+  width: max-content;
+  
+}
+
+.partner-logo {
+  height: 80px; /* Adjust logo size */
+  width: auto; /* Maintain aspect ratio */
+  margin: 0 20px; /* Add spacing between logos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  filter: grayscale(50%); /* Dim the logo initially for a sleek look */
+}
+
+.partner-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  filter: grayscale(0%); /* Remove grayscale on hover */
+}
+
+.partner-logo:active {
+  transform: scale(1.05); /* Slightly reduce the scale when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Dim shadow on click */
+}
+
+@media (max-width: 768px) {
+  .partner-logo {
+    height: 60px; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-logo {
+    height: 50px; /* Further reduce size for very small screens */
+    margin: 0 5px; /* Reduce spacing for smaller screens */
+  }
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

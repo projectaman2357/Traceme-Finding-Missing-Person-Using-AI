@@ -1,0 +1,137 @@
+/* General container styling */
+.container {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Left section */
+.left-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.info-box {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.info-box p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Right section */
+.right-section {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.right-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.right-section p {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+}

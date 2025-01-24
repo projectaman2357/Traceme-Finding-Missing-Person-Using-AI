@@ -1,0 +1,121 @@
+/* General container styles */
+.missing-person-report-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Styling the report section */
+.missing-person-report {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.missing-person-report h2,
+.missing-person-report h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.missing-person-report label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.missing-person-report input,
+.missing-person-report select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.missing-person-report button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.missing-person-report button:hover {
+  background-color: #45a049;
+}
+
+.verified-message {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Photo preview section */
+.photo-preview-section {
+  flex: 0 0 35%;
+  max-width: 35%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.photo-preview-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.photo-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 1px;
+}
+
+.photo-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e1e1;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.photo-container:hover {
+  transform: scale(1.05);
+}
+
+.uploaded-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-photo-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-photo-button:hover {
+  background-color: red;
+}
+
+/* Style for the "No photos uploaded" message */
+.photo-preview-section p {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  font-family: 'Times New Roman', Times, serif;
+}

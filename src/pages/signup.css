@@ -1,0 +1,193 @@
+/* Signup.css */
+
+/* Container Styling */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Form Heading */
+.container h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Input Fields */
+.container form div {
+  margin-bottom: 15px;
+}
+
+.container form label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.container form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.container form input:focus {
+  border-color: #007bff;
+}
+
+/* Signup Button */
+.container form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}/* General container styling */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form elements styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Link styling */
+span {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+span a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  input {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
+
+
+.container form button:hover {
+  background-color: #0056b3;
+}
+
+/* Link Styling */
+.container span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.container span a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container span a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .container {
+      padding: 15px;
+      margin: 20px;
+  }
+
+  .container h1 {
+      font-size: 20px;
+  }
+
+  .container form input, 
+  .container form button {
+      font-size: 14px;
+  }
+}
