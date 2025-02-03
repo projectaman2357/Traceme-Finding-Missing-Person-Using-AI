@@ -81,7 +81,7 @@ const FacePhoto = () => {
         </div>
 
         {/* Video Stream for Camera */}
-        <video ref={videoRef} autoPlay className="video-preview"></video>
+        <video ref={videoRef} autoPlay width="300" height="300" className="video-preview"></video>
         <button className="capture-button" onClick={handleTakePhoto}>Take Photo</button>
 
         {/* Canvas to capture image */}
