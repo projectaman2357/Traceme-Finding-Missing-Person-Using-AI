@@ -1,112 +1,156 @@
-/* Navbar styles */
+/* Navbar Styling */
 .navbar {
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background: linear-gradient(to right, #3b2281, #bd1616); /* Gradient Background */
-
-  /* background-color: rgba(59, 130, 246, 0.5); */
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: large;
-  font-style: inherit;
-  font-weight: 100%;
+  width: 100%;
+  max-width: 1200px;
 }
 
+/* Logo */
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+/* Navigation Links */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 40px;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-/* Hover effects for specific names */
 .nav-links a:hover {
-  color: rgba(255, 140, 0, 0.9); /* Orange tint */
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #f39c12;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: rgba(255, 140, 0, 0.9);
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%; /* Underline effect */
-}
-
-/* Dropdown styles */
-.dropdown {
-  position: relative;
-  color: white;
-}
-
+/* Dropdown Menu */
 .dropdown-menu {
+  display: none;
   position: absolute;
+  background: #222;
   top: 100%;
   left: 0;
-  display: none;
-  background-color: white;
-  color: black;
-  padding: 5px 10px;
-  list-style: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
+.dropdown-menu li {
+  padding: 5px 0;
+}
+
 .dropdown-menu a {
+  color: white;
   display: block;
-  padding: 5px 10px;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(59, 130, 246, 0.2);
-  color: #007acc;
+  color: #f39c12;
 }
 
-/* Marquee styles */
-.marque-container {
-  background: linear-gradient(to right, #3b2281, #bd1616); /* Gradient Background */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
 
-  /* background-color: rgba(124, 71, 133); */
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #222;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease-in-out;
+    gap: 15px;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: none;
+    text-align: center;
+    display: block;
+  }
+}
+
+/* Marquee */
+.marquee-container {
+  margin-top: 80px;
+  background: #f39c12;
+  padding: 10px 0;
   overflow: hidden;
   white-space: nowrap;
-  padding: 10px;
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
+  position: relative;
 }
 
 .marquee {
   display: inline-block;
-  font-size: 1rem;
-  color: #fff;
-  animation: marqueeScroll 10s linear infinite;
+  white-space: nowrap;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  animation: marqueeAnimation 15s linear infinite;
 }
 
-@keyframes marqueeScroll {
-  0% {
+/* Marquee Animation */
+@keyframes marqueeAnimation {
+  from {
     transform: translateX(100%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
 }
+

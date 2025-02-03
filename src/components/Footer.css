@@ -1,67 +1,159 @@
+/* Base styles for footer container */
 .footer-container {
-  background-color: #4B9CD3;
+  background-color: #333;
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-section {
   flex: 1;
-  margin: 15px;
   min-width: 200px;
+  margin-bottom: 1.5rem;
 }
 
 .footer-section h5 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
 .footer-section p {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
 }
 
 .footer-section ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 .footer-section ul li {
-  margin: 10px 0;
+  margin: 0.5rem 0;
 }
 
 .footer-section ul li a {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
 .footer-section ul li a:hover {
-  color: red;
+  color: #007bff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .social-icons a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 14px;
+  color: #ccc;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #00bcd4;
+  color: #007bff;
 }
 
+/* Footer bottom section */
 .footer-bottom {
-  border-top: 1px solid #444;
-  padding: 10px 0;
-  font-size: 14px;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive design with media queries */
+
+/* For smaller screens (Tablets and Mobile) */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h5 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+/* For very small screens (Mobile Phones) */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 1rem;
+  }
+
+  .footer-section h5 {
+    font-size: 1.1rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* For larger screens (Desktops) */
+@media (min-width: 1024px) {
+  .footer-container {
+    padding: 3rem 2rem;
+  }
+
+  .footer-section h5 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 1.1rem;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+  }
 }

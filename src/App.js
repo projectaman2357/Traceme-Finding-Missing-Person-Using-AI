@@ -7,6 +7,7 @@ import SearchNow from './components/SearchNow';
 import Choose from './components/Choose';
 import Account from './components/Account';
 import Footer from './components/Footer';
+import ImageUpload from './components/ImageUpload';
 import Login from './pages/Login'; // Assuming you have a Login page
 import Signup from './pages/Signup'; // Assuming you have a Signup page
 import Report from './pages/Report'; // Assuming you have a Report page
@@ -29,6 +30,7 @@ const App = () => {
             path="/"
             element={
               <>
+                <ImageUpload/>
                 <ProfileSection />
                 <Partnership /> {/* Add Partnership below ProfileSection */}
                 <SearchNow />
