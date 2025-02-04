@@ -1,62 +1,99 @@
+/* General Styles */
 .facephoto-container {
+  font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
+  margin: 20px;
 }
 
 .facephoto-title {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .required {
   color: red;
 }
 
-.gender-options {
-  margin: 10px 0;
+/* Gender Selection */
+.gender-options-mobile,
+.gender-options-desktop {
+  margin: 10px;
 }
 
-.gender-options label {
-  margin-right: 15px;
+.gender-options-desktop {
+  display: block;
 }
 
+.gender-options-mobile {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Photo Section */
 .photo-section {
   margin-top: 20px;
 }
 
 .photo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 }
 
 .sample-photo {
   width: 200px;
   height: 200px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
+  object-fit: cover;
 }
 
 .capture-button {
-  margin-top: 10px;
-  background-color: #007bff;
+  background-color: transparent;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.capture-button img {
-  width: 30px;
-  height: 30px;
+.video-container {
+  margin-top: 10px;
 }
 
 .video-preview {
-  width: 300px;
-  height: 300px;
-  border: 2px solid black;
-  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.upload-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .gender-options-desktop {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .gender-options-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .upload-button {
+    width: 100%;
+  }
 }

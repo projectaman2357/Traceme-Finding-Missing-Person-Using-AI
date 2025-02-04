@@ -1,159 +1,105 @@
-/* Base styles for footer container */
+/* Footer Container */
 .footer-container {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem 1rem;
-  font-family: 'Arial', sans-serif;
+  background: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
 }
 
+/* Footer Content */
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
+/* Footer Sections */
 .footer-section {
   flex: 1;
-  min-width: 200px;
-  margin-bottom: 1.5rem;
+  min-width: 250px;
+  margin: 10px;
+  text-align: left;
 }
 
-.footer-section h5 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.footer-section p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #ccc;
-}
-
-.footer-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 0.5rem 0;
-}
-
-.footer-section ul li a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.footer-section ul li a:hover {
-  color: #007bff;
-}
-
-.social-icons {
+/* Menu Toggle Button */
+.menu-toggle {
+  width: auto;
+  background: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
+.menu-toggle span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Hidden content - shown when toggled */
+.menu-content {
+  display: none;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-left: 20px; /* Add spacing between the toggle and content */
+}
+
+.footer-section.open .menu-content {
+  display: flex;
+  flex-direction: row; /* Horizontally align menu items */
+  align-items: center;
+}
+
+/* Social Icons */
 .social-icons a {
-  color: #ccc;
-  font-size: 1.2rem;
+  display: block;
+  color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  margin: 5px 0;
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: #f4b400;
 }
 
-/* Footer bottom section */
+/* Footer Bottom */
 .footer-bottom {
-  text-align: center;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #ccc;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #444;
 }
 
-/* Responsive design with media queries */
-
-/* For smaller screens (Tablets and Mobile) */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .footer-section {
-    text-align: center;
-    margin-bottom: 1rem;
+    width: 100%;
   }
 
-  .footer-section h5 {
-    font-size: 1.2rem;
+  .menu-toggle {
+    font-size: 16px;
+    padding: 8px;
   }
 
-  .footer-section ul li a {
-    font-size: 0.9rem;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  .social-icons a {
-    font-size: 1.1rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.85rem;
-  }
-}
-
-/* For very small screens (Mobile Phones) */
-@media (max-width: 480px) {
-  .footer-container {
-    padding: 1rem;
-  }
-
-  .footer-section h5 {
-    font-size: 1.1rem;
-  }
-
-  .footer-section ul li a {
-    font-size: 0.85rem;
-  }
-
-  .social-icons a {
-    font-size: 1rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.8rem;
-  }
-}
-
-/* For larger screens (Desktops) */
-@media (min-width: 1024px) {
-  .footer-container {
-    padding: 3rem 2rem;
-  }
-
-  .footer-section h5 {
-    font-size: 1.4rem;
-  }
-
-  .footer-section ul li a {
-    font-size: 1.1rem;
-  }
-
-  .social-icons a {
-    font-size: 1.3rem;
-  }
-
-  .footer-bottom {
-    font-size: 1rem;
+  .menu-content {
+    padding: 8px;
+    margin-left: 0; /* Reset margin for smaller screens */
   }
 }

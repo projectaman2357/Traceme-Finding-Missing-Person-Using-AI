@@ -17,6 +17,7 @@ import Vehicle from   './pages/Vehicle';
 import FindPerson from './pages/FindPerson';
 import Anonymous from './pages/Anonymous';
 import Contact from './pages/Contact'
+// import FacePhotoPage from './pages/FacePhotoPage'
 import './App.css';
 
 const App = () => {
@@ -48,6 +49,8 @@ const App = () => {
           <Route path="/FindPerson" element={<FindPerson />} />
           <Route path="/Anonymous" element={<Anonymous />} />
           <Route path="/contact" element={<Contact/>} />
+          {/* <Route path="/facephoto" element={<FacePhotoPage/>}/>npm install @capacitor/camera @capacitor/filesystem */}
+
 
         </Routes>
       </div>
