@@ -1,117 +1,80 @@
-/* General Profile Section Styles */
+/* Profile Section - Adjusted Layout */
 .profile-section {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-
-.left-column, .right-column {
-  flex: 1;
-  padding: 20px;
-}
-
-.scan-container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 10px;
+  height: 60vh; /* Reduced height for better visibility */
+  width: 100%;
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.scanned-image {
-  max-width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Button Styles */
-.scan-btn, .add-missing-button, .stop-camera-btn, .capture-btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-bottom: 10px;
-}
-
-.scan-btn:hover, .add-missing-button:hover, .stop-camera-btn:hover, .capture-btn:hover {
-  background-color: #45a049;
-}
-
-.stop-camera-btn {
-  background-color: #f44336;
-}
-
-.scan-input {
-  display: none;
-}
-
-/* Camera Action Buttons */
-.camera-actions {
+/* Responsive Image Container */
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Video Section Styling */
-.suspicious-video {
+/* Responsive Image with Smooth Animation */
+.profile-image {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage */
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px; /* Rounded corners for better aesthetics */
 }
 
-/* === Responsive Styling === */
+/* Hover Effect */
+.image-container:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
   .profile-section {
-    flex-direction: column;
-    align-items: center;
+    height: 50vh;
+    padding: 15px;
   }
 
-  .left-column {
-    max-width: 350px;
-  }
-
-  .scanned-image {
-    max-height: 180px;
+  .image-container {
+    width: 85vw;
+    height: 50vh;
   }
 }
 
 @media (max-width: 768px) {
-  .scan-container {
-    max-width: 300px;
+  .profile-section {
+    height: 45vh;
+    padding: 10px;
   }
 
-  .scanned-image {
-    max-height: 160px;
+  .image-container {
+    width: 90vw;
+    height: 45vh;
+  }
+
+  .profile-image {
+    border-radius: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .scan-container {
-    max-width: 90%;
-    padding: 15px;
+  .profile-section {
+    height: 40vh;
+    padding: 5px;
   }
 
-  .scanned-image {
-    max-height: 150px;
+  .image-container {
+    width: 95vw;
+    height: 40vh;
   }
 
-  .button-group {
-    flex-direction: column;
-  }
-
-  .scan-btn {
-    margin-bottom: 10px;
+  .profile-image {
+    border-radius: 10px;
   }
 }
-
